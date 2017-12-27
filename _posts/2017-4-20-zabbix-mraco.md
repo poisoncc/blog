@@ -3,6 +3,7 @@ layout: post
 title: "zabbix触发器名称宏变量被省略"
 comments: true
 categories: [zabbix]
+description: 关于zabbix首页触发器名称包含宏变量被省略的问题
 ---
 
 关于zabbix触发器名称包含宏变量被省略的问题

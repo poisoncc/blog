@@ -3,6 +3,7 @@ layout: post
 title: "zabbix接受logstash数据并告警"
 comments: true
 categories: [logstash, zabbix]
+description: 利用logstash+zabbix实现日志告警
 ---
 
 接上一篇blog，日志是收集到了，但日志除了利用elasticsearch和kibana来统计做图外，还实时反应了系统已出现的error or warning。所以利用logstash实现日志告警是件很有意义的事情。这里由于本人也经常跟zabbix打交道，所以首先想到的便是zabbix，而恰好logstash的output模块支持输出到zabbix，让这件事变得很顺利。

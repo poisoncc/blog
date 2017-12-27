@@ -3,6 +3,7 @@ layout: post
 title: "用ELK收集aix的errpt日志"
 comments: true
 categories: [logstash, kibana, elasticsearch, aix]
+description: 领导下达任务，一周内把aix的errpt日志收集起来，本来以为很轻松简单，可实际操作后发现，处处是坑。。。
 ---
 
 领导下达任务，一周内把aix的errpt日志收集起来，本来以为很轻松简单，可实际操作后发现，处处是坑。。。
