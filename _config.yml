@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://mao.nocturne.cc
+url: http://blog.nocturne.cc
 date_format: "ordinal"
 title: POISON
 subtitle: "半个程序员 | 喜欢周杰伦"
