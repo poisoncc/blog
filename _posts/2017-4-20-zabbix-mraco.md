@@ -21,22 +21,22 @@ description: 关于zabbix首页触发器名称包含宏变量被省略的问题
 
 终于在./include/items.inc.php文件中找到如下代码：
 ```
-switch ($item[‘value_type’]) {
+switch ($item['value_type']) {
 　　　　case ITEM_VALUE_TYPE_STR:
-　　　　　　　　$mapping = getMappedValue($value, $item[‘valuemapid’]);
+　　　　　　　　$mapping = getMappedValue($value, $item['valuemapid']);
 　　　　// break; is not missing here
 　　　　case ITEM_VALUE_TYPE_TEXT:
 　　　　case ITEM_VALUE_TYPE_LOG:
 　　　　　　　　if ($trim && mb_strlen($value) > 20) {
-　　　　　　　　　　　　$value = mb_substr($value, 0, 20).’…’;
+　　　　　　　　　　　　$value = mb_substr($value, 0, 20).'…';
 　　　　　　　　}
 
 　　　　　　　　if ($mapping !== false) {
-　　　　　　　　　　　　$value = $mapping.’ (‘.$value.’)’;
+　　　　　　　　　　　　$value = $mapping.' ('.$value.')';
 　　　　　　　　}
 　　　　　　　　break;
 　　　　default:
-　　　　　　　　$value = applyValueMap($value, $item[‘valuemapid’]);
+　　　　　　　　$value = applyValueMap($value, $item['valuemapid']);
 }
 ```
 注意那个20的逻辑，o(∩_∩)o…哈哈，终于找到你，还好我没放弃。通过修改，前端宏变量果然全部显示。
