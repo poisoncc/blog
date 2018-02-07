@@ -7,7 +7,7 @@ date_format: "ordinal"
 title: POISON
 subtitle: "半个程序员 | 喜欢周杰伦"
 description: "静止了，所有的花开"
-keywords: POISON, MAO, nocturne, maomao
+keywords: POISON, POISON, nocturne, maomao
 timezone: Asia/Beijing
 encoding: "utf-8"
 side_bar_repo_limit: 5
@@ -15,7 +15,7 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: MAO
+author: POISON
 organization: xdstar.com
 organization_url: http://www.xdstar.com
 github_username: maotongxue
@@ -39,8 +39,8 @@ navs:
     label: 维基
 
   -
-    href: /links/
-    label: 链接
+    href: /life/
+    label: 围城
 
   -
     href: /about/
