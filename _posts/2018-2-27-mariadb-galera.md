@@ -139,24 +139,31 @@ sudo systemctl start mysql
 ## 验证集群
 
     mysql -u root -p -e "SHOW STATUS LIKE 'wsrep_cluster_size'"
+
 > 如果这个值跟节点数量一致，则说明集群启动正常，详细的集群信息可查看[官方说明](https://mariadb.com/kb/en/library/galera-cluster-status-variables/ "官方说明")
 
 ## 注意事项
 如果想myuser使用mypassword从任何主机连接到mysql服务器的话。
 
     GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'%' IDENTIFIED BY 'mypassword' WITH GRANT OPTION;
+
 如果想允许用户myuser从ip为192.168.1.3的主机连接到mysql服务器，并使用mypassword作为密码
 
     GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.1.3' IDENTIFIED BY 'mypassword' WITH GRANT OPTION;
 
 
-集群若因重启后未恢复正常，需要`rm /var/lib/mysql/grastate.dat /var/lib/mysql/galera.cache`，然后`galera_new_cluster`其他节点直接`sudo systemctl start mysql`
+集群若因重启后未恢复正常，需要
+
+    rm /var/lib/mysql/grastate.dat /var/lib/mysql/galera.cache
+
+然后`galera_new_cluster`其他节点直接`sudo systemctl start mysql`
 
 如果还是开启不了，则`ps -ef | grep mysql` ，然后`kill -9 xxx` 删除mysql进程。
 
 mysql当一个ip太多连接数据库错误时，数据库会把该ip拉黑，连接报错
 
 	ERROR 1129 (HY000): Host '192.168.99.105' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'
+
 解决方法就是
 
 	mysqladmin -uroot -padmin flush-hosts
