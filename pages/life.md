@@ -15,8 +15,8 @@ permalink: /life/
 > 尽管我非常想念那只没节操的企鹅。
 
 <ul class="listing">
-{% for wiki in site.life %}
-{% if wiki.title != "Life Template" %}
+{% for life in site.life %}
+{% if life.title != "Life Template" %}
 <li class="listing-item"><a href="{{ site.url }}{{ life.url }}">{{ life.title }}</a></li>
 {% endif %}
 {% endfor %}
