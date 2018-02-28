@@ -1,6 +1,6 @@
 ---
 layout: life
-title: hello world
+title: hello
 categories: life
 description: test
 keywords: hello
