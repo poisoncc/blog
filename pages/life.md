@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: life
 title: 城里的人想出来，城外的人想进去
 description: 没什么可说的
 keywords: 围城
@@ -8,12 +8,12 @@ menu: 围城
 permalink: /life/
 ---
 
-> 有一天朋友问我，为什么你总是买一大堆的东西塞进你的冰箱里，就不能等吃完再买吗？我想，如果它总是满的，就不会再有企鹅住进来了吧。尽管我非常想念那只没节操的企鹅。
+> 有一天朋友问我，为什么你总是买一大堆的东西塞进你的冰箱里，就不能等吃完再买吗？
 
-<ul class="listing">
-{% for wiki in site.wiki %}
-{% if wiki.title.indexOf("life") == 0 %}
-<li class="listing-item"><a href="{{ site.url }}{{ wiki.url }}">{{ wiki.title }}</a></li>
-{% endif %}
-{% endfor %}
-</ul>
+> 我想，如果它总是满的，就不会再有企鹅住进来了吧。
+
+> 尽管我非常想念那只没节操的企鹅。
+
+# 2018年
+## 2月28日
+哈哈哈哈哈哈哈哈，对只是笑一下。
