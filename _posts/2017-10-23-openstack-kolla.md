@@ -87,7 +87,7 @@ MountFlags=shared
 
 ## 下载并配置kolla
 
-###下载kolla-ansible源码
+### 下载kolla-ansible源码
 
 	cd /home
 
