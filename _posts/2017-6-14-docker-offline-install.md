@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "docker离线安装"
-categories: [cate1, cate2]
+categories: [docker]
 description: ubuntu16.04的docker离线安装
 ---
 
