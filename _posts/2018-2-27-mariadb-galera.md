@@ -2,7 +2,7 @@
 layout: post
 title: "利用galera做mariaDB集群"
 comments: true
-categories: [mariadb, galera]
+categories: [mariadb, galera, openstack]
 description: ubuntu 16.04利用galera做高可用备份的mariaDB 10.1集群
 ---
 
@@ -21,6 +21,10 @@ description: ubuntu 16.04利用galera做高可用备份的mariaDB 10.1集群
 	sudo apt-get update
 
 	sudo apt-get install rsync mariadb-server
+
+设置root密码
+	
+	mysql_secure_installation
 
 	mysql -uroot -padmin
 
