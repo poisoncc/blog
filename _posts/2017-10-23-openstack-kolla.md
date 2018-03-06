@@ -155,7 +155,7 @@ kolla-ansible deploy -i /home/all-in-one
 [root@all tools]# ./cleanup-host
 ```
 
-### 安装多节点openstack
+## 安装多节点openstack
 
 在部署主机上的`root`下执行`ssh-keygen -t rsa`
 

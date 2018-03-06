@@ -56,12 +56,16 @@ local6.err	@ip
 stopsrc -s syslogd
 startsrc -s syslogd
 ```
-### 添加定时任务，每五分钟执行一次aix_errpt.sh
+### 添加定时任务
+
+每五分钟执行一次aix_errpt.sh
 ```
 crontab -e
 0,5,10,15,20,25,30,35,40,45,50,55 * * * * /bin/sh /usr/local/sbin/aix_errpt.sh
 ```
-### 在远程logstash中添加对aix收集的conf。aix_errpt.conf如下：
+### 在远程logstash中添加对aix收集的conf。
+
+aix_errpt.conf如下：
 ```
 input {
 　　udp {
