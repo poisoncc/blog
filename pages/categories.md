@@ -8,6 +8,8 @@ menu: 分类
 permalink: /categories/
 ---
 
+{% include category_cloud.html %}
+
 <section class="container posts-content">
 {% assign sorted_categories = site.categories | sort %}
 {% for category in sorted_categories %}
