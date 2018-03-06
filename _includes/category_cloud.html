@@ -2,14 +2,14 @@
 <div id='category_cloud'>
     <div class="categories">
         {% for cat in site.categories %}
-        <a href="/categories.html#{{cat | first}}" rel="{{ cat|last|size  }}">{{cat | first}}</a>
+        <a href="/categories/#{{cat | first}}" rel="{{ cat|last|size  }}">{{cat | first}}</a>
         {% endfor %}
     </div>
 </div>
 <script>
 $.fn.tagcloud.defaults = {
   size: {start: 18, end: 24, unit: 'pt'},
-  color: {start: '#555', end: '#428bca'}
+  color: {start: 'CDE', end: '#428bca'}
 };
  
 $(function () {

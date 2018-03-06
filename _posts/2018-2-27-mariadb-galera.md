@@ -2,7 +2,7 @@
 layout: post
 title: "利用galera做mariaDB集群"
 comments: true
-categories: [mariadb, galera, ubuntu]
+categories: [mariadb, galera]
 description: ubuntu 16.04利用galera做高可用备份的mariaDB 10.1集群
 ---
 
