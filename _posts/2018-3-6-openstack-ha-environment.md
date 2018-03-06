@@ -149,33 +149,55 @@ service {
 ```
 
 ### 设置并查看集群
+
 重启corosync
+
 	/etc/init.d/corosync restart
+
 查看当前节点
+
 	corosync-cfgtool -s
+
 查看集群节点join情况
+
 	corosync-cmapctl runtime.totem.pg.mrp.srp.members
+
 重启pacemaker
+
 	/etc/init.d/pacemaker restart
+
 查看集群情况
+
 	crm_mon -1
+
 设置集群基本属性
+
 	crm configure property pe-warn-series-max="1000" pe-input-series-max="1000" pe-error-series-max="1000" cluster-recheck-interval="5min"
+
 关闭STONITH，如果生产环境设置合适的STONITH
+
 	crm configure property stonith-enabled=false
 
 ### 开启vip
 
 开启vip（只在一个节点上运行）
-        crm configure primitive vip ocf:heartbeat:IPaddr2   params ip="192.168.99.150" cidr_netmask="24" op monitor interval="30s"
+
+```
+crm configure primitive vip ocf:heartbeat:IPaddr2   params ip="192.168.99.150" cidr_netmask="24" op monitor interval="30s"
+```
+
 查看vip情况
+
         crm resource status vip
 
 ## 时间同步
+
 所有节点安装ntp服务
-apt install chrony
+
+	apt install chrony
 
 ### controller节点
+
 vi /etc/chrony/chrony.conf
 
 ```
@@ -184,6 +206,7 @@ allow 192.168.99.0/24
 ```
 
 ### other节点
+
 vi /etc/chrony/chrony.conf
 
 ```
@@ -194,7 +217,9 @@ allow 192.168.99.0/24
 查看ntp服务`chronyc sources`
 
 ## 配置openstack源
+
 在所有节点上运行
+
 ```
 apt install software-properties-common
 
@@ -212,4 +237,23 @@ apt install python-openstackclient
 请参考之前的[文章](http://blog.nocturne.cc/2018/02/27/mariadb-galera/ "文章")，在三个controller上安装mariadb-galera集群。
 
 ## 消息队列
+请参考之前的[文章](http://blog.nocturne.cc/2018/02/13/rabbitmq/ "文章")，在三个controller上安装rabbitmq集群。
+
+## Memcached
+
+在所有controller节点上安装memcached
+
+	apt install memcached python-memcache
+
+配置memcached
+
+vi /etc/memcached.conf
+
+	-l 192.168.99.112
+
+添加该节点的具体ip
+
+重启服务
+
+	service memcached restart
 
