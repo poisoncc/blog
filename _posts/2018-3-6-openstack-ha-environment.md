@@ -257,3 +257,172 @@ vi /etc/memcached.conf
 
 	service memcached restart
 
+## 负载均衡
+
+这里利用haproxy做controller个组件的负载均衡
+
+### 安装haproxy
+在三个controller上安装
+
+	apt-get install haproxy
+
+### 配置haproxy
+
+vi /etc/haproxy/haproxy.cfg
+
+```
+global
+	log 127.0.0.1:514 local0 info
+	chroot /var/lib/haproxy
+	stats socket /run/haproxy/admin.sock mode 660 level admin
+	stats timeout 30s
+	user haproxy
+	group haproxy
+	daemon
+
+defaults
+	log	global
+	mode	http
+	option	httplog
+	option	dontlognull
+	timeout connect 5000
+	timeout client  50000
+	timeout server  50000
+	errorfile 400 /etc/haproxy/errors/400.http
+	errorfile 403 /etc/haproxy/errors/403.http
+	errorfile 408 /etc/haproxy/errors/408.http
+	errorfile 500 /etc/haproxy/errors/500.http
+	errorfile 502 /etc/haproxy/errors/502.http
+	errorfile 503 /etc/haproxy/errors/503.http
+	errorfile 504 /etc/haproxy/errors/504.http
+
+listen  admin_stats
+	bind 0.0.0.0:8888
+	mode        http
+	stats uri   /dbs
+	stats realm     Global\ statistics
+	stats auth  admin:admin
+
+listen mariadb_3306
+	bind 192.168.99.150:3306
+	option tcplog
+	mode tcp
+	server mariadb1 192.168.99.112:3306 backup check inter 2000 rise 2 fall 5
+	server mariadb2 192.168.99.113:3306 check inter 2000 rise 2 fall 5
+	server mariadb3 192.168.99.114:3306 backup check inter 2000 rise 2 fall 5
+
+listen keystone-admin-cluster_35357
+	bind 192.168.99.150:35357
+	balance source
+	option tcpka
+	option tcplog
+	server controller1 192.168.99.112:35357 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:35357 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:35357 check inter 2000 rise 2 fall 5
+
+listen keystone-public-internal-cluster_5000
+	bind 192.168.99.150:5000
+	balance source
+	option tcpka
+	option tcplog
+	server controller1 192.168.99.112:5000 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:5000 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:5000 check inter 2000 rise 2 fall 5
+
+listen glance-api-cluster_9292
+	bind 192.168.99.150:9292
+	balance source
+	option tcpka
+	option tcplog
+	server controller1 192.168.99.112:9292 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:9292 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:9292 check inter 2000 rise 2 fall 5
+
+listen glance-registry-cluster_9191
+	bind 192.168.99.150:9191
+	balance source
+	option tcpka
+	option tcplog
+	server controller1 192.168.99.112:9191 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:9191 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:9191 check inter 2000 rise 2 fall 5
+
+listen nova-compute-api-cluster_8774
+	bind 192.168.99.150:8774
+	balance source
+	option tcpka
+	option tcplog
+	server controller1 192.168.99.112:8774 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:8774 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:8774 check inter 2000 rise 2 fall 5
+
+listen nova-metadata-api-cluster_8775
+	bind 192.168.99.150:8775
+	balance source
+	option tcpka
+	option tcplog
+	server controller1 192.168.99.112:8775 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:8775 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:8775 check inter 2000 rise 2 fall 5
+
+listen cinder-api-cluster_8776
+	bind 192.168.99.150:8776
+	balance source
+	option tcpka
+	option tcplog
+	server controller1 192.168.99.112:8776 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:8776 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:8776 check inter 2000 rise 2 fall 5
+
+listen placement-api-cluster_8778
+	bind 192.168.99.150:8778
+	balance source
+	option tcpka
+	option tcplog
+	server controller1 192.168.99.112:8778 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:8778 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:8778 check inter 2000 rise 2 fall 5
+
+listen nova-vncproxy_6080
+	bind 192.168.99.150:6080
+	balance source
+	option tcpka
+	option tcplog
+	server controller1 192.168.99.112:6080 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:6080 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:6080 check inter 2000 rise 2 fall 5
+
+listen neutron-api-cluster_9696
+	bind 192.168.99.150:9696
+	balance source
+	option tcpka
+	option tcplog
+	server controller1 192.168.99.112:9696 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:9696 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:9696 check inter 2000 rise 2 fall 5
+
+listen dashboard_80
+	bind 192.168.99.150:80
+	balance source
+	capture cookie vgnvisitor= len 32
+	cookie SERVERID insert indirect nocache
+	mode http
+	option forwardfor
+	option httpclose
+	rspidel ^Set-cookie:\ IP=
+	server controller1 192.168.99.112:80 check inter 2000 rise 2 fall 5
+	server controller2 192.168.99.113:80 check inter 2000 rise 2 fall 5
+	server controller3 192.168.99.114:80 check inter 2000 rise 2 fall 5
+```
+
+haproxy的监控页面就是`http://192.168.99.150:8888/dbs`，各节点的监控页面`http://192.168.99.112:8888/dbs`。
+
+修改haproxy配置文件后，只需运行`service haproxy reload`。
+
+### 开启haproxy日志
+
+vi /etc/rsyslog.conf
+
+	local0.* /var/log/haproxy.log
+
+service rsyslog restart
