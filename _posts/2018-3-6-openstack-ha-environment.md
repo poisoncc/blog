@@ -415,7 +415,9 @@ listen dashboard_80
 	server controller3 192.168.99.114:80 check inter 2000 rise 2 fall 5
 ```
 
-haproxy的监控页面就是`http://192.168.99.150:8888/dbs`，各节点的监控页面`http://192.168.99.112:8888/dbs`。
+> mysql为防止死锁，需要backup两个节点。
+
+haproxy的监控页面就是`http://192.168.99.150:8888/dbs`，各节点的监控页面`http://192.168.99.112:8888/dbs`，密码均为`admin:admin`。当然现在看的话只有mysql的负载均衡生效了，openstack的各组件的负载均衡在其安装启动完成后才会生效。
 
 修改haproxy配置文件后，只需运行`service haproxy reload`。
 
@@ -426,3 +428,5 @@ vi /etc/rsyslog.conf
 	local0.* /var/log/haproxy.log
 
 service rsyslog restart
+
+**至此，openstack-ha集群的环境已搭建完成，后面开始介绍openstack各组件的安装配置过程，当然该环境可根据生产环境和具体需求进行拆分，比如单独搭建mariadb集群，单独搭建pacemaker+corosync集群，单设存储网络等等**。
