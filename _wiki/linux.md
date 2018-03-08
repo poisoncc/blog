@@ -3,7 +3,6 @@ layout: wiki
 title: Linux
 categories: linux
 description: linux 常用操作记录。
-keywords: linux
 ---
 
 ### 查看linux内核版本信息

@@ -1,0 +1,36 @@
+---
+layout: wiki
+title: Git
+categories: [git]
+description: git的日常
+---
+
+### 删除某个文件的历史
+
+> 不小心上传了很多乱七八糟的文件，rm后再次提交，但是`.git`里还是有记录，导致库很大怎么办？
+
+	git filter-branch -f --tree-filter 'rm -rf rails/nocturne/app/test' HEAD
+
+	git push origin --force
+
+### 回退commit
+
+	git reset --hard <hashcode>
+
+	git push origin master -f
+
+### 切换远程分支到本地
+
+	git checkout -b xxx origin/sss
+
+### 删除本地分支
+
+	git branch -d xxxx
+
+### 删除远程分支
+
+	git push origin :xxxx
+
+### clone指定分支的指定深度
+
+	git clone -b branch url --depth=1
