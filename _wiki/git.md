@@ -40,3 +40,11 @@ description: git的日常
 ### clone指定分支的指定深度
 
 	git clone -b branch url --depth=1
+
+### 下载github某个文件或文件夹
+
+	例如：https://github.com/maotongxue/elk/tree/master/some_tried/zabbix_log_conf
+
+	可以用svn：svn checkout https://github.com/maotongxue/elk/trunk/some_tried
+
+注意把`tree/master`改为`trunk`
