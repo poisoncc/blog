@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "openstack高可用集群手动部署之环境准备（一）"
+title: "openstack高可用集群手动部署之环境准备"
 categories: [openstack]
 description: openstack云平台搭建最主要的便是基础环境的搭建了，今天开始把自己搭建的过程分享出来。
 ---
 
 > openstack云平台搭建最主要的便是基础环境的搭建了，今天开始把自己搭建的过程分享出来。如有不对之处，还请留言纠正。
 
-# openstack高可用集群手动部署之环境准备（一）
+# openstack高可用集群手动部署之环境准备
 ## 网络环境
 网络，在IT领域中最为重要，openstack也不例外，我这里推荐新手在虚拟机的练习。
 
@@ -147,6 +147,20 @@ service {
   ver: 1
 }
 ```
+### 设置秘钥
+生成秘钥
+
+	corosync-keygen
+
+分发秘钥和config
+
+	scp -p authkey corosync.conf controller2:/etc/corosync/
+
+	scp -p authkey corosync.conf controller3:/etc/corosync/
+
+所有秘钥的权限均为400
+
+	chmod 400 /etc/corosync/authkey
 
 ### 设置并查看集群
 
