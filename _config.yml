@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://blog.nocturne.cc
+url: http://blog.poison.cc
 date_format: "ordinal"
 title: POISON
 subtitle: "半个程序员 | 喜欢周杰伦"
@@ -95,7 +95,7 @@ comments_provider: gitalk
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: maotongxue
-    repo: blog
+    repo: blog_jekyll
     clientID: 7cabab11f3bd537af4d5
     clientSecret: 1e96b6addbdfc37e00df00214c2b6d390dda1bf7
 # 在使用其它评论组件时可点击显示 Disqus
