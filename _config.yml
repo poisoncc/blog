@@ -96,8 +96,8 @@ comments_provider: gitalk
 gitalk:
     owner: maotongxue
     repo: blog_jekyll
-    clientID: 7cabab11f3bd537af4d5
-    clientSecret: a8eb1c5dbd82be771c8ed4b960426c4319f4b032
+    clientID: e299343e180d4f1ca2f2
+    clientSecret: 611fdf95491e268ddba246d580cc20c954d5f301
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
