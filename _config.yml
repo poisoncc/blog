@@ -97,7 +97,7 @@ gitalk:
     owner: maotongxue
     repo: blog_jekyll
     clientID: 7cabab11f3bd537af4d5
-    clientSecret: 1e96b6addbdfc37e00df00214c2b6d390dda1bf7
+    clientSecret: a8eb1c5dbd82be771c8ed4b960426c4319f4b032
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
