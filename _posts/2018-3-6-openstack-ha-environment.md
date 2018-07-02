@@ -248,10 +248,10 @@ apt install python-openstackclient
 ```
 
 ## 安装数据库
-请参考之前的[文章](http://blog.nocturne.cc/2018/02/27/mariadb-galera/ "文章")，在三个controller上安装mariadb-galera集群。
+请参考之前的[文章](http://blog.poison.cc/2018/02/27/mariadb-galera/ "文章")，在三个controller上安装mariadb-galera集群。
 
 ## 消息队列
-请参考之前的[文章](http://blog.nocturne.cc/2018/02/13/rabbitmq/ "文章")，在三个controller上安装rabbitmq集群。
+请参考之前的[文章](http://blog.poison.cc/2018/02/13/rabbitmq/ "文章")，在三个controller上安装rabbitmq集群。
 
 ## Memcached
 

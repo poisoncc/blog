@@ -36,7 +36,7 @@ sed -i s'/Defaults requiretty/#Defaults requiretty'/g /etc/sudoers
 ```
 
 ## 时间同步
-所有节点要时钟同步，详情请看之前的[博文](http://blog.nocturne.cc/2018/03/06/openstack-ha-environment/#时间同步 "博文")
+所有节点要时钟同步，详情请看之前的[博文](http://blog.poison.cc/2018/03/06/openstack-ha-environment/#时间同步 "博文")
 
 ## 安装open-vm-tools
 如果在虚拟机里运行所有节点，需要安装这个虚拟化工具
