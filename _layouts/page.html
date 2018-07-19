@@ -18,7 +18,9 @@ layout: default
 <!-- / .banner -->
  <section class="container content">
         <div class="columns">
+          {% if page.menu == "关于" %}
             <div class="column two-thirds" >
+          {% endif %}
                 <article class="article-content markdown-body">
                     {{ content }}
                 </article>
@@ -30,13 +32,13 @@ layout: default
                 <div class="comment">
                     {% include comments.html %}
                 </div>
+          {% if page.menu == "关于" %}
             </div>
-            {% if page.menu == "关于" %}
                 <div class="column one-third">
                     {% include sidebar-search.html %}
                     {% include sidebar-popular-repo.html %}
                 </div>
-            {% endif %}
+          {% endif %}
         </div>
     </section>
     <!-- /section.content -->
