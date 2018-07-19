@@ -31,10 +31,12 @@ layout: default
                     {% include comments.html %}
                 </div>
             </div>
-            <div class="column one-third">
-                {% include sidebar-search.html %}
-                {% include sidebar-popular-repo.html %}
-            </div>
+            {% if page.menu == "关于" %}
+                <div class="column one-third">
+                    {% include sidebar-search.html %}
+                    {% include sidebar-popular-repo.html %}
+                </div>
+            {% endif %}
         </div>
     </section>
     <!-- /section.content -->
