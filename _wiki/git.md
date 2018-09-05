@@ -47,4 +47,4 @@ description: git的日常
 
 	可以用svn：svn checkout https://github.com/maotongxue/elk/trunk/some_tried
 
-注意把`tree/master`改为`trunk`
+	注意把`tree/master`改为`trunk`

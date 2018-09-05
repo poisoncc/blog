@@ -90,7 +90,7 @@ sudo blkid -o value -s TYPE /dev/sdb
 	xfs
 ```
 
-## 创建ceph集群
+## 创建ceph集群s(luminous)
 在ceph1节点
 
 	su - cephuser
@@ -103,6 +103,15 @@ wget -q -O- 'https://download.ceph.com/keys/release.asc' | sudo apt-key add -
 
 echo deb https://download.ceph.com/debian-luminous/ $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/ceph.list
 ```
+
+> 国内换成清华源安装会很快
+
+```
+wget -q -O- 'https://mirrors.tuna.tsinghua.edu.cn/ceph/keys/release.asc' | sudo apt-key add -
+
+echo deb https://mirrors.tuna.tsinghua.edu.cn/ceph/debian-luminous/ $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/ceph.list
+```
+
 ### 安装ceph-deploy
 
 	sudo apt install ceph-deploy
@@ -121,11 +130,24 @@ vim ceph.conf
 在[global]下添加
 public network = 192.168.99.0/24
 osd pool default size = 2
+mon_allow_pool_delete = true
+
+单节点的话需要增加
+osd pool default size = 1
+osd crush chooseleaf type = 0
+
 ```
+
+`osd pool default size`是每个pg的副本数量
+`osd crush chooseleaf type`有两个值，`0`表示以`osd`建立副本，`1`表示以`node`建立副本
 
 ### 安装ceph到所有节点
 
 	ceph-deploy install --release luminous ceph1 ceph2 ceph3
+
+> 清华源安装
+
+	ceph-deploy install --release luminous --repo-url https://mirrors.tuna.tsinghua.edu.cn/ceph/debian-luminous/ --gpg-url https://mirrors.tuna.tsinghua.edu.cn/ceph/keys/release.asc ceph1 ceph2 ceph3
 
 ### 初始化mon
 
@@ -166,3 +188,13 @@ sudo ceph health
 	HEALTH_OK
 
 sudo ceph -s
+
+### 失败回退
+
+	ceph-deploy purge {ceph-node}
+	
+	ceph-deploy purgedata {ceph-node}
+
+	ceph-deploy forgetkeys
+
+	rm ceph.*
