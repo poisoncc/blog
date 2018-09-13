@@ -18,13 +18,16 @@ permalink: /about/
 
 经常和这些东西打交道：
 
-    Git
-    Docker+compose+Swarm
-    Logstash+Elasticsearch+Kibana
-    Zabbix
-    Ruby on Rails
-    Openstack
-    K8s (ing...)
+    - Git
+    - Docker+Compose+Swarm
+    - Logstash+Elasticsearch+Kibana
+    - Zabbix
+    - Ruby on Rails
+    - Openstack
+    - Kubernetes
+    - Python+Django (ing...)
+    - Dva+Umi (ing...)
+
 
 ## **About Blog**
 
@@ -34,4 +37,4 @@ permalink: /about/
 
 Github:  [点击进入我的github(欢迎fork me)](https://github.com/maotongxue)
 
-Email:  [点击给我发邮件](mailto:maoguangzheng@outlook.com)
+Email:  [点击给我发邮件](mailto:553780882@qq.com)

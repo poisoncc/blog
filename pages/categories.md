@@ -1,7 +1,7 @@
 ---
 layout: categories
 title: 静止了~所有的花开
-description: 哈哈，你找到了我的文章基因库
+description: 一个人有很多标签
 keywords: 分类
 comments: false
 menu: 分类
