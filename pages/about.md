@@ -18,13 +18,14 @@ permalink: /about/
 
 经常和这些东西打交道：
 
-    - Git
+    - Jenkins
     - Docker+Compose+Swarm
     - Logstash+Elasticsearch+Kibana
     - Zabbix
-    - Ruby on Rails
+    - Ceph
     - Openstack
     - Kubernetes
+    - Ruby on Rails (elementary)
     - Python+Django (ing...)
     - Dva+Umi (ing...)
 
