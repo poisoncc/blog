@@ -14,10 +14,16 @@ permalink: /life/
 
 # 2018年
 ## 9月10日
+<p onMouseOver="document.all.menulayer_1.style.visibility=''" onMouseOut="document.all.menulayer_1.style.visibility='hidden'">吐槽一下</p>
+<div id="menulayer_1" class="menulayer" style="visibility: hidden;">
 小厂，似曾相识的处境，第一家公司，四个技术岗，当我跟主管在会议室谈完离职后，另外三个也相继进了会议室，他们甚至是裸辞也要立刻离开，主管都怀疑是我带的风气。今天虽然公司比上家大了那么一点，但是突然开发组最后两个人也离职却是始料不及的，和上家还有一点不同的就是，它是想做大的，但不论产品，市场还是管理都很粗糙，有种出师未捷身先死的感觉。不论我坚持到何时，都希望他的未来会好吧，一起加油。
+</div>
 
 ## 9月5日
+<p onMouseOver="document.all.menulayer_2.style.visibility=''" onMouseOut="document.all.menulayer_2.style.visibility='hidden'">闲来无事</p>
+<div id="menulayer_2" class="menulayer" style="visibility: hidden;">
 突然意识到已经很久没有更新了，但是又懒得更新，不是没有进步，最近在于IT技能方面的进步还是比较满意的，自己的OneNote也是越来越大，技能树也不断冒出新枝，最得意的还是对k8s的把控，但在发布于公网上还是犹豫了，毕竟“玩”的也都是开源的东西。说到开源，虽然自己当前的工作得益于开源，但对开源世界的贡献还是个零，只有索取。其实最近（已经很久了），毕业两年，对自己的职业方向很迷，开发出身，毕业进入运维，工作中既有开发又有运维，一会弄elk，openstack，docker，k8s这些，时而写点儿python，ROR。总的来说就是不伦不类，广泛而不深，似乎内心更偏向于devops方向。至于运维和开发的区别，其实在我看来都是共通的，浅层运维玩开源，开发玩框架和现成的包，到深层注重性能的时候，就要见真章了，都要优化架构，优化细节，注重稳定高效。
+</div>
 
 ## 3月16日
 今天在裤子兜里发现一个U盘，插上电脑后发现是上一家公司给的，离职前怎么也找不到，里面还有最后一次出差的报告，又想起来那个出差补助最后也没给，虽然才几百块钱。
