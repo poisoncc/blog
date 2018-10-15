@@ -1,6 +1,6 @@
 ---
 layout: categories
-title: 静止了~所有的花开
+title: 人一生会有多少标签？
 description: 一个人有很多标签
 keywords: 分类
 comments: false
