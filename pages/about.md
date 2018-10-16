@@ -28,7 +28,7 @@ permalink: /about/
     - Ruby on Rails (elementary)
     - Python+Django (ing...)
     - Dva+Umi (ing...)
-
+    - vue (ing...)
 
 ## **About Blog**
 
