@@ -17,8 +17,6 @@ permalink: /resume/
  - 联系方式：15620633942
  - E-mail：553780882@qq.com
  - 技术博客：http://blog.poison.cc
-
-
  - 期望职业：运维开发工程师
  - 期望薪资：税前月薪18k~20k
  - 期望城市：北京
