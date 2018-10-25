@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: resume
 title: 我的个人简历
 description: 隐藏的秘籍
 comments: false
