@@ -11,8 +11,8 @@ permalink: /resume/
 
 # 个人信息
 
- - 毛广正/男/1992
- - 本科/天津工业大学软件工程专业
+ - 毛广正 / 男 / 1992
+ - 本科 / 天津工业大学 / 软件工程专业
  - 工作年限：2年
  - 联系方式：15620633942
  - E-mail：553780882@qq.com
@@ -28,7 +28,7 @@ permalink: /resume/
 ## 北京万维星辰科技有限公司 （ 2017年5月 ~ 今 ）
 
 ### 万维云平台系统
-负责openstak云平台controller高可用的研究部署，ceph存储集群的部署以及openstack与ceph的融合的研究部署工作。在公司中经云机房搭建3constroller+6computer+6ceph集群，公司内部机房搭建1constroller+6computer+6lvm集群；以及日常云平台的运维工作。
+负责openstack云平台controller高可用的研究部署，ceph存储集群的部署以及openstack与ceph的融合的研究部署工作。在公司中经云机房搭建3constroller+6computer+6ceph集群，公司内部机房搭建1constroller+6computer+6lvm集群；以及日常云平台的运维工作。
 
 ### 万维devops系统
 独立负责公司devops系统的研究部署工作。公司业务是基于elk+rails的日志分析工作，初期负责elk+rails+
