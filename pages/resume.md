@@ -15,9 +15,9 @@ permalink: /resume/
  - 本科 / 天津工业大学 / 软件工程专业
  - 工作年限：2年
  - 联系方式：15620633942
- - E-mail：553780882@qq.com
+ - E-mail：mail@poison.cc
  - 技术博客：http://blog.poison.cc
- - 期望职业：运维开发工程师 - devops工程师
+ - 期望职业：运维开发工程师 / devops工程师
  - 期望薪资：税前月薪18k~25k
  - 期望城市：北京
 
