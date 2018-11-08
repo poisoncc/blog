@@ -38,4 +38,4 @@ permalink: /about/
 
 Github:  [点击进入我的github(欢迎fork me)](https://github.com/maotongxue)
 
-Email:  [点击给我发邮件](mailto:553780882@qq.com)
+Email:  [点击给我发邮件](mailto:mail@poison.com)
