@@ -11,25 +11,25 @@ description: 由于运维同事对网络的错误操作导致公司内部opensta
 
 ## 定位实例所在的computer
 
-  通过instance_id在controller上运行`nova show 3fecc6e3-ca78-4ab3-9956-fd6db151b8e8`获得实例所在的计算节点以及他的instance_name。
+通过instance_id在controller上运行`nova show 3fecc6e3-ca78-4ab3-9956-fd6db151b8e8`获得实例所在的计算节点以及他的instance_name。
 
-  ```
-  | OS-EXT-SRV-ATTR:host                 | compute4                                                                         |
-  | OS-EXT-SRV-ATTR:hostname             | ansible-client1                                                                  |
-  | OS-EXT-SRV-ATTR:hypervisor_hostname  | compute4                                                                         |
-  | OS-EXT-SRV-ATTR:instance_name        | instance-0000025a
-  ```
+```
+| OS-EXT-SRV-ATTR:host                 | compute4                                                                         |
+| OS-EXT-SRV-ATTR:hostname             | ansible-client1                                                                  |
+| OS-EXT-SRV-ATTR:hypervisor_hostname  | compute4                                                                         |
+| OS-EXT-SRV-ATTR:instance_name        | instance-0000025a
+```
 
 ## 定位实例的盘符
 
-  在实例所在的计算节点运行`virsh domblklist instance-0000025a`获得系统盘盘符名：
+在实例所在的计算节点运行`virsh domblklist instance-0000025a`获得系统盘盘符名：
 
-  ```
-  Target     Source
-  -----------------------
-  vda        /dev/sdd
-  ```
+```
+Target     Source
+-----------------------
+vda        /dev/sdd
+```
 
 ## 修复分区
 
-  关闭实例后，在计算节点运行`fsck -f -y /dev/sdd1`修复分区，启动实例后系统分区可读写，服务启动正常。
+关闭实例后，在计算节点运行`fsck -f -y /dev/sdd1`修复分区，启动实例后系统分区可读写，服务启动正常。
