@@ -6,6 +6,8 @@ categories: [zabbix]
 description: 关于zabbix首页触发器名称包含宏变量被省略的问题
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 # 关于zabbix触发器名称包含宏变量被省略的问题
 
 ## 场景
@@ -46,3 +48,5 @@ switch ($item['value_type']) {
 注意那个20的逻辑，o(∩_∩)o…哈哈，终于找到你，还好我没放弃。通过修改，前端宏变量果然全部显示。
 
 通过这个问题，感觉这个思考过程很特殊，所以记录下来，并把此问题的解决方法告诉大家。
+
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

@@ -5,6 +5,8 @@ categories: [openstack]
 description: openstack云平台搭建最主要的便是基础环境的搭建了，今天开始把自己搭建的过程分享出来。
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 > openstack云平台搭建最主要的便是基础环境的搭建了，今天开始把自己搭建的过程分享出来。如有不对之处，还请留言纠正。
 
 # openstack高可用集群手动部署之环境准备
@@ -444,3 +446,5 @@ vi /etc/rsyslog.conf
 service rsyslog restart
 
 **至此，openstack-ha集群的环境已搭建完成，后面开始介绍openstack各组件的安装配置过程，当然该环境可根据生产环境和具体需求进行拆分，比如单独搭建mariadb集群，单独搭建pacemaker+corosync集群，单设存储网络等等**。
+
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

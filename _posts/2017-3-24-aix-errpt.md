@@ -6,6 +6,8 @@ categories: [logstash, kibana, elasticsearch, aix]
 description: 领导下达任务，一周内把aix的errpt日志收集起来，本来以为很轻松简单，可实际操作后发现，处处是坑。。。
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 领导下达任务，一周内把aix的errpt日志收集起来，本来以为很轻松简单，可实际操作后发现，处处是坑。。。
 
 首先aix的errpt会输出aix的硬件错误日志，这和平时的系统日志不一样，后者只是软件层面的日志。也因为和系统日志不一样，所以不能用平常的syslog的方式收集，后来终于找到一个思路，并验证成功。
@@ -106,3 +108,5 @@ output{
 4.aix的syslog配置文件，@前是tab
 
 关于cron定时任务，如果定时任务没有执行，可查看cron日志，/var/spool/mail/root
+
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

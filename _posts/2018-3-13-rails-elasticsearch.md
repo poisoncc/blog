@@ -5,6 +5,8 @@ categories: [rails, elasticsearch, ajax]
 description: rails读取elasticsearch的某个索引数据，并利用ajax通过scroll把数据全部遍历出来
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 > rails读取elasticsearch的某个索引数据，并利用ajax通过scroll把数据全部遍历出来。
 
 ## 用到的Gem
@@ -214,3 +216,5 @@ match '/externe_es_ajax', to: 'poisons#externe_es', via:'get'
 //= require jquery
 //= require jquery_ujs
 ```
+
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

@@ -5,6 +5,8 @@ categories: [rails]
 description: "在ubuntu16.04下搭建ruby on rails环境，做一个简单登录的权限控制"
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 > 在ubuntu16.04下搭建ruby on rails环境，做一个简单登录的权限控制。
 
 ## rails环境搭建
@@ -30,7 +32,7 @@ gem sources --remove https://rubygems.org/ # 删除官方源
 gem sources -a https://ruby.taobao.org/ # 添加淘宝源
 
 gem sources -l # 查看gem源
-	
+
 gem sources -u # 清除缓存
 ```
 
@@ -45,13 +47,13 @@ gem sources -u # 清除缓存
 > 遇到这个错误时说明没有安装nodejs
 
 	Bundler::GemRequireError: There was an error while trying to load the gem 'uglifier'.
-	
+
 	apt-get install nodejs
 
 > 遇到这个错误说明需要production的secret_key_base
 
 	#<RuntimeError: Missing `secret_key_base` for 'production' environment, set this value in `config/secrets.yml`>
-	
+
 	rake secret RAILS_ENV=production
 
 	把生成的值填入./config/secrets.yml
@@ -107,12 +109,12 @@ rails g devise:install
 vi config/routes.rb
 
 	get 'home/index' # 删掉这一行
-	
+
 	root to: 'home#index'
 
 ### 配置提示告警功能
 vi app/views/layouts/application.html.erb
-	
+
 ```
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
@@ -132,7 +134,7 @@ rails g devise user
 rails db:migrate
 
 ### 增加nocturne页面
-rails g scaffold nocturne column1 column2 column3 column4 column5 
+rails g scaffold nocturne column1 column2 column3 column4 column5
 
 rails db:migrate
 
@@ -177,7 +179,7 @@ vi app/controllers/application_controller.rb
 
 ```
 protected
- 
+
 def authenticate_admin
   unless current_user.admin?
     # flash[:alert] = "Not allow!"
@@ -201,3 +203,6 @@ vi app/views/home/index.html.erb
 rails s
 
 http://localhost:3000
+
+
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**</center

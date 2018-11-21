@@ -5,6 +5,8 @@ categories: [openstack]
 description: openstack的身份认证组件--keystone的高可用安装
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 > openstack的身份认证组件--keystone的高可用安装,如有不对之处，还请留言纠正。
 
 # openstack高可用集群手动部署之keystone
@@ -37,7 +39,7 @@ vi /etc/keystone/keystone.conf
 ```
 [database]
 connection = mysql+pymysql://keystone:openstack_passwd@controller/keystone
-	
+
 [token]
 provider = fernet
 
@@ -132,3 +134,4 @@ openstack project create --domain default --description "Demo Project" demo
 
 	openstack role add --project demo --user demo user
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

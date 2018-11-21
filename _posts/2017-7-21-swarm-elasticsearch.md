@@ -5,6 +5,8 @@ categories: [docker, swarm, elasticsearch]
 description: 利用docker swarm搭建elasticsearch集群
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 # 利用docker swarm搭建elasticsearch集群
 
 废话不多说直接上Dockerfile
@@ -49,10 +51,12 @@ docker service create --detach=true --name es-data-3  --network appnet --replic
 
 查看es服务运行状态
 
-```	
+```
 docker service ls -f name=es
 curl -XGET http://127.0.0.1:9200/_cluster/health?pretty
 curl -XGET http://127.0.0.1:9200/_cat/nodes?v
 ```
 
 一个简单的es集群便搭建好了，当然具体的副本数量，es的jvm大小，es的数据持久化等细节都没做，以后慢慢补上。
+
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

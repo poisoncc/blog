@@ -5,6 +5,8 @@ categories: [openstack, heat, elasticsearch]
 description: 使用openstack的编排工具heat编排不同需求的elasticsearch集群。
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 > 由于公司开发需求，需要时常搭建不同需求的es集群，每次手动搭建既费时又费力，而公司内部开发环境在openstack上，es使用docker部署，所以便使用heat去编排不同es集群，很是方便。
 
 **本文前提环境：openstack已安装好heat功能，有自己的es-docker的gitlab库，有自己的docker images库，openstack的基础镜像有docker环境、docker images库的秘钥、gitlab秘钥**
@@ -294,3 +296,5 @@ rm -rf /var/lib/heat-cfntools/cfn-userdata
 ### 查看编排列表
 
 `openstack stack list`
+
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

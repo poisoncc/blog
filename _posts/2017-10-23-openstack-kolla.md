@@ -5,6 +5,8 @@ categories: [openstack, kolla]
 description: 利用kolla快速安装openstack
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 # 利用kolla快速安装openstack
 
 ## 配置网络环境
@@ -169,3 +171,4 @@ kolla-ansible deploy -i /home/all-in-one
 
 kolla-ansible upgrade -i /home/multinode
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

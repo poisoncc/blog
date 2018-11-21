@@ -6,6 +6,8 @@ categories: [logstash, zabbix]
 description: 利用logstash+zabbix实现日志告警
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 接上一篇blog，日志是收集到了，但日志除了利用elasticsearch和kibana来统计做图外，还实时反应了系统已出现的error or warning。所以利用logstash实现日志告警是件很有意义的事情。这里由于本人也经常跟zabbix打交道，所以首先想到的便是zabbix，而恰好logstash的output模块支持输出到zabbix，让这件事变得很顺利。
 
 logstash的output默认不自带zabbix插件，需要手动安装，在logstash的安装目录下：
@@ -67,4 +69,4 @@ output{
 #### 添加触发器
 名字为error : {ITEM.LASTVALUE}，表达式，目前还没找到合适的触发器，所以设置为只要获取的数据字符串长度大于零就触发
 
-
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

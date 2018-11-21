@@ -5,6 +5,8 @@ categories: [docker]
 description: docker静态ip的利用
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 > docker容器的网络在默认情况下会使用bridge模式，其ip地址是dhcp获取的，而在某些场景下，需要固定docker容器的ip。
 
 > 这里使用docker-compose工具编排容器。
@@ -16,7 +18,7 @@ version: '2'
 services:
   mysql:
     image: daocloud.io/mysql:latest
-    environment: 
+    environment:
         - MYSQL_ROOT_PASSWORD=root
     container_name: mysql
     networks:
@@ -38,3 +40,5 @@ networks:
 这样当docker-compose起容器的时候会先创建定义的bridge网络，然后再起容器。
 
 使用`docker inspect mysql`查看容器ip是否为`172.25.0.15`。
+
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

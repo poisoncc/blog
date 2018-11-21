@@ -5,6 +5,8 @@ categories: [ceph]
 description: 在ubuntu16.04上搭建三个节点组成的ceph集群
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 > 在ubuntu16.04上搭建三个节点组成的ceph集群
 
 ## 集群概况
@@ -192,9 +194,11 @@ sudo ceph -s
 ### 失败回退
 
 	ceph-deploy purge {ceph-node}
-	
+
 	ceph-deploy purgedata {ceph-node}
 
 	ceph-deploy forgetkeys
 
 	rm ceph.*
+
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**

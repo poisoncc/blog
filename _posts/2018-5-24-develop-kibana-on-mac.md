@@ -5,6 +5,8 @@ categories: [kibana]
 description: 在mac上搭建kibana的开发环境，开发完成后，打包kibana。
 ---
 
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
+
 ## 安装node环境
 
 因为kibana是用nodejs开发的，所以当然首要就是安装node环境。
@@ -71,3 +73,5 @@ error Command failed with exit code 1.
 这是因为有些包需要翻墙下载。。。而且传统的ssr并不能使终端也翻墙，所以需要设置终端也翻墙。
 
 **不论我是否打包x-pack版本，都会遇到，原因未知。**
+
+**<center>生活不易，码文不易，转载请标明<a href="http://blog.poison.cc">出处</a>，小弟在此先行谢过。</center>**
