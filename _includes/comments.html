@@ -1,6 +1,6 @@
 {% if page.comments != false %}
 
-  {% if site.comments_provider != 'disqus' and site.lazy_load_disqus and site.disqus and site.disqus.username %}
+  <!-- {% if site.comments_provider != 'disqus' and site.lazy_load_disqus and site.disqus and site.disqus.username %}
     <a href="#" class="show_disqus_comment" onclick="return false;">Show Disqus Comments</a>
     <div id="disqus_thread"></div>
     <script>
@@ -33,14 +33,14 @@
     })
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-  {% endif %}
+  {% endif %} -->
 
-  {% case site.comments_provider %}
-    {% when 'disqus' %}
+  <!-- {% case site.comments_provider %} -->
+    <!-- {% when 'disqus' %}
       {% if site.disqus and site.disqus.username %}
         {% assign load_disqus = true %}
-        <!-- Disqus Protection, see https://github.com/mzlogin/mzlogin.github.io/issues/2 -->
-        {% if site.disqus.username == 'mzlogin' %}
+        Disqus Protection, see https://github.com/mzlogin/mzlogin.github.io/issues/2 -->
+        <!-- {% if site.disqus.username == 'mzlogin' %}
           {% assign load_disqus = false %}
           {% if site.url contains 'mazhuang.org' %}
             {% assign load_disqus = true %}
@@ -69,8 +69,8 @@
           </script>
           <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         {% endif %}
-      {% endif %}
-    {% when 'gitment' %}
+      {% endif %} -->
+    <!-- {% when 'gitment' %}
         <div id="container"></div>
         <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
         <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
@@ -85,11 +85,11 @@
             },
         })
         gitment.render('container')
-        </script>
-    {% when 'gitalk' %}
+        </script> -->
+    <!-- {% when 'gitalk' %} -->
         <div id="gitalk-container"></div>
-        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
             id: '{{ page.url }}',
@@ -99,9 +99,9 @@
             owner: '{{ site.gitalk.owner }}',
             admin: ['{{ site.gitalk.owner }}'],
             labels: ['gitment'],
-            perPage: 50,
+            perPage: 15,
         })
         gitalk.render('gitalk-container')
         </script>
-  {% endcase %}
+  <!-- {% endcase %} -->
 {% endif %}

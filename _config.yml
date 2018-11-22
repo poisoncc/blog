@@ -94,10 +94,10 @@ comments_provider: gitalk
 #        client_secret: 1e96b6addbdfc37e00df00214c2b6d390dda1bf7
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: maotongxue
-    repo: poison
-    clientID: e299343e180d4f1ca2f2
-    clientSecret: 611fdf95491e268ddba246d580cc20c954d5f301
+    owner: poisoncc
+    repo: poison_gitalk
+    clientID: 03268daa3e7b248d5fef
+    clientSecret: f47027f78627e2883d061e85acf8c0a60f35bdac
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
