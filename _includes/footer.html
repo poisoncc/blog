@@ -1,16 +1,122 @@
+<div style="display: none;" id="rocket-to-top" class="mobile-hidden">
+    <div style="opacity:0;display: block;" class="level-2"></div>
+    <div class="level-3"></div>
+</div>
+<style type="text/css">
+#rocket-to-top div {
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 149px;
+}
+#rocket-to-top .level-2 {
+    background: url("{{ site.url }}/assets/images/back_to_up.png") no-repeat scroll -149px 0 transparent;
+    display: none;
+    height: 250px;
+    opacity: 0;
+    z-index: 1;
+}
+#rocket-to-top .level-3 {
+    background: none repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: block;
+    height: 150px;
+    z-index: 2;
+}
+#rocket-to-top {
+    background: url("{{ site.url }}/assets/images/back_to_up.png") no-repeat scroll 0 0 transparent;
+    cursor: default;
+    display: block;
+    height: 250px;
+    margin: -125px 0 0;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 80%;
+    width: 149px;
+    z-index: 11;
+}
+</style>
+
+<script type="text/javascript">
+$(function() {
+    var e = $("#rocket-to-top"),
+    t = $(document).scrollTop(),
+    n,
+    r,
+    i = !0;
+    $(window).scroll(function() {
+        var t = $(document).scrollTop();
+        t == 0 ? e.css("background-position") == "0px 0px" ? e.fadeOut("slow") : i && (i = !1, $(".level-2").css("opacity", 1), e.delay(100).animate({
+            marginTop: "-1000px"
+        },
+        "normal",
+        function() {
+            e.css({
+                "margin-top": "-125px",
+                display: "none"
+            }),
+            i = !0
+        })) : e.fadeIn("slow")
+    }),
+    e.hover(function() {
+        $(".level-2").stop(!0).animate({
+            opacity: 1
+        })
+    },
+    function() {
+        $(".level-2").stop(!0).animate({
+            opacity: 0
+        })
+    }),
+    $(".level-3").click(function() {
+        function t() {
+            var t = e.css("background-position");
+            if (e.css("display") == "none" || i == 0) {
+                clearInterval(n),
+                e.css("background-position", "0px 0px");
+                return
+            }
+            switch (t){
+            case "0px 0px":
+                e.css("background-position", "-298px 0px");
+                break;
+            case "-298px 0px":
+                e.css("background-position", "-447px 0px");
+                break;
+            case "-447px 0px":
+                e.css("background-position", "-596px 0px");
+                break;
+            case "-596px 0px":
+                e.css("background-position", "-745px 0px");
+                break;
+            case "-745px 0px":
+                e.css("background-position", "-298px 0px");
+            }
+        }
+        if (!i) return;
+        n = setInterval(t, 50),
+        $("html,body").animate({scrollTop: 0},"slow");
+    });
+});
+</script>
     <footer class="container">
         <div class="site-footer" role="contentinfo">
             <div class="copyright left mobile-block">
                     © 2016-2018
                     <span title="{{ site.author}}">{{ site.author }}</span>
                     <span id="busuanzi_container_site_pv">访问量：<span id="busuanzi_value_site_pv"></span> / <span id="busuanzi_value_site_uv"></span></span>
-                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+                    <!-- <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a> -->
             </div>
-            <ul class="site-footer-links right mobile-hidden">
+            <!-- <ul class="site-footer-links right mobile-hidden">
                 <li>
                     <a href="javascript:window.scrollTo(0,0)" >TOP</a>
                 </li>
-            </ul>
+            </ul> -->
 <!--
             <a href="{{ site.github.repository_url }}" target="_blank" aria-label="view source code">
                 <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
