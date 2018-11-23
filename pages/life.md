@@ -3,7 +3,7 @@ layout: life
 title: 城里的人想出来，城外的人想进去
 description: 没什么可说的
 keywords: 围城
-comments: false
+comments: true
 menu: 围城
 permalink: /life/
 ---

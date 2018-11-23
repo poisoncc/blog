@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 没有句点已经很完美了，何必误会故事没说完。
-description: 我是谁？
+description: 我是谁？我在哪？我在干什么？
 comments: true
 menu: 关于
 permalink: /about/
