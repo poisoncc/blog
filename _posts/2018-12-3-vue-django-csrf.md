@@ -39,8 +39,23 @@ return JsonResponse({"crsftoken":crsftoken})
 
 ```
 headers: {
-  'Content-Type': 'multipart/form-data',
+  'Content-Type': 'application/json',
   "X-CSRFToken": this.crsftoken
+}
+this.axios.post(url,formdata,config)
+```
+
+### vue直接去cookie中获取crsftoken
+
+```
+let formdata = new FormData()
+formdata.append('name',this.name)
+let regex = /.*csrftoken=([^;.]*).*$/
+let config = {
+    headers: {
+      'Content-Type': 'application/json',
+      "X-CSRFToken": document.cookie.match(regex) === null ? null : document.cookie.match(regex)[1]
+    }
 }
 this.axios.post(url,formdata,config)
 ```
