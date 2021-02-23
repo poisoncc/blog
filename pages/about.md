@@ -18,21 +18,22 @@ permalink: /about/
 
 经常和这些东西打交道：
 
-    - Jenkins
-    - Docker+Compose+Swarm
+    - Jenkins (formerly)
+    - Docker+Compose+Swarm (formerly)
     - Logstash+Elasticsearch+Kibana
-    - Zabbix
-    - Ceph
-    - Openstack
+    - Zabbix (formerly)
+    - Ceph (formerly)
+    - Openstack (formerly)
     - Kubernetes
-    - Ruby on Rails (elementary)
+    - prometheus
+    - Ruby on Rails (formerly & elementary)
     - Python+Django (ing...)
-    - Dva+Umi (ing...)
-    - vue (ing...)
+    - Dva+Umi (formerly & elementary)
+    - vue (formerly & elementary)
 
 ## **About Blog**
 
-博客经历了四个阶段，第一次是直接用的github page；后来买了树莓派，在上面基于docker搭建了wordpress，利用花生壳内网穿透，买了域名，问题就是这个时候出现的，国内想要用自己的域名太麻烦了，花生壳不支持cname，用url隐性跳转又要好多钱，后来利用github做了页面嵌套，但是原来的网页基于设备的自适应没了，而且访问速度太慢了，经过github再到树莓派；第三个阶段hexo+github；第四个阶段就是现在了，jekyll+github，简单易用。
+博客经历了五个阶段，第一次是直接用的github page；后来买了树莓派，在上面基于docker搭建了wordpress，利用花生壳内网穿透，买了域名，问题就是这个时候出现的，国内想要用自己的域名太麻烦了，花生壳不支持cname，用url隐性跳转又要好多钱，后来利用github做了页面嵌套，但是原来的网页基于设备的自适应没了，而且访问速度太慢了，经过github再到树莓派；第三个阶段hexo+github；第四个阶段就是现在了，jekyll+github，简单易用；自从发现家里宽带有公网ip时，你懂的，第五个阶段。
 
 ## **Contact Me**
 
