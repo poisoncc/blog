@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://blog.poison.cc
+url: https://blog.poison.cc
 date_format: "ordinal"
 title: POISON
 subtitle: "半个程序员 | 喜欢周杰伦"
